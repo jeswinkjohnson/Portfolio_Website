@@ -38,6 +38,7 @@ app.get("/n", function (req, res) {
         res.send(data)
     })
 })
-app.listen(process.env.PORT || 3000, function () {
-    console.log("Working in http://localhost:3000")
+var port = process.env.PORT || 3000
+app.listen(port, function () {
+    console.log(port)
 })
