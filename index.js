@@ -12,7 +12,7 @@ app.get("/", function (req, res) {
     })
 })
 app.get("/m", function (req, res) {
-    readFile("./opt/render/project/src/mobile.html", "UTF-8", function (err, data) {
+    readFile("/opt/render/project/src/mobile.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
@@ -21,7 +21,7 @@ app.get("/m", function (req, res) {
     })
 })
 app.get("/d", function (req, res) {
-    readFile("./opt/render/project/src/main.html", "UTF-8", function (err, data) {
+    readFile("/opt/render/project/src/main.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
@@ -30,7 +30,7 @@ app.get("/d", function (req, res) {
     })
 })
 app.get("/n", function (req, res) {
-    readFile("./opt/render/project/src/reject.html", "UTF-8", function (err, data) {
+    readFile("/opt/render/project/src/reject.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
