@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <title>Portfoio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+            .abt_img {
+                border-radius: 20px;
+                margin-bottom: 5px;
+                margin-right: 5px;
+                background-color: aliceblue;
+            }
+        
+            .edu_p {
+                font-family: 'VT323';
+                margin: 0px;
+            }
+        
+            .skill_p {
+                font-size: 12px;
+                background-color: #c6c4c4;
+                padding: 6px;
+                border-radius: 20px;
+                font-weight: bold;
+                border: dotted;
+                border-width: 2.5px;
+                margin: 0px;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+        
+            .prog {
+                height: 20px;
+                width: 270px;
+            }
+        
+            .card {
+                --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+                width: 190px;
+                height: 254px;
+                padding: 5px;
+                border-radius: 1rem;
+                overflow: visible;
+                background: #f7ba2b;
+                background: var(--background);
+                position: relative;
+                z-index: 1;
+            }
+        
+            .card::after {
+                position: absolute;
+                content: "";
+                top: 30px;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                transform: scale(0.8);
+                filter: blur(25px);
+                background: #f7ba2b;
+                background: var(--background);
+                transition: opacity .5s;
+            }
+        
+            .card-info {
+                --color: #181818;
+                background: var(--color);
+                color: #f7ba2b;
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+                border-radius: .7rem;
+            }
+        
+            .card .title {
+                font-weight: bold;
+                letter-spacing: .1em;
+            }
+        
+            *:not(.container_my),
+            ::after,
+            ::before {
+                box-sizing: border-box;
+            }
+        
+            .container_my {
+                color: #212529;
+                font-family: 'Quicksand';
+                font-size: 2.26rem;
+                /* text-transform: uppercase; */
+                /* height: 100vh; */
+                display: flex;
+                align-items: center;
+                /* justify-content: center; */
+                line-height: normal;
+                box-sizing: unset !important;
+            }
+        
+            .container_my,
+            ::after,
+            ::before {
+                box-sizing: unset !important;
+            }
+        
+            .animation {
+                height: 50px;
+                overflow: hidden;
+                /* margin-left: 1rem; */
+            }
+        
+            .animation>div>div {
+                padding: 0.25rem 0.75rem;
+                height: 2.81rem;
+                margin-bottom: 2.81rem;
+                display: inline-block;
+            }
+        
+            .animation div:first-child {
+                animation: text-animation 8s infinite;
+            }
+        
+        
+        
+            @keyframes text-animation {
+                0% {
+                    margin-top: -0.15rem;
+                }
+        
+                12.5% {
+                    margin-top: -0.15rem;
+                }
+        
+                25% {
+                    margin-top: -5.40rem;
+                }
+        
+                37.5% {
+                    margin-top: -5.40rem;
+                }
+        
+                50% {
+                    margin-top: -10.65rem;
+                }
+        
+                62.5% {
+                    margin-top: -10.65rem;
+                }
+        
+                75% {
+                    margin-top: -16rem;
+                }
+        
+                87.5% {
+                    margin-top: -16rem;
+                }
+        
+                100% {
+                    margin-top: -0.15rem;
+                }
+            }
+        </style>
+</head>
+  <body style="overflow-x: hidden;">
+    <!-- Modal -->
+    <div class="modal fade" id="modal_my" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Warning!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Animations have been turned off due to the small screen size, inorder to avoid any ill experince. We prefer you use a device with a wider display.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: rgb(141,114,141)" style="width: 100vw; height: 100vh;">
+        <div class="d-flex justify-content-between flex-wrap align-items-center" style="width: 100vw; height: 100vh;" id="first_page">
+            
+            <div style="width: 45%;" id="first_page_txt">
+                <div style="padding-left: 20px;">
+                    <h1 style="font-family: 'Quicksand', sans-serif;">Hi, My name is Jeswin</h1>
+                    <main class="container_my" id="jack" style="::after, ::before{box-sizing: unset;}">
+                        <h1 style="color: #212529;
+                    font-family: 'Quicksand';">I am a </h1>
+                        <section class="animation" style="::after, ::before{box-sizing: unset;}">
+                            <div class="first" style="::after, ::before{box-sizing: unset;}">
+                                <div>Web Dev</div>
+                            </div>
+                            <div class="second" style="::after, ::before{box-sizing: unset;}">
+                                <div>3d Artist</div>
+                            </div>
+                            <div class="third" style="::after, ::before{box-sizing: unset;}">
+                                <div>Ai Dev</div>
+                            </div>
+                            <div class="fourth" style="::after, ::before{box-sizing: unset;}">
+                                <div>Software Dev</div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+
+            <div style="width: 55%; max-height: 100%;" id="first_page_vid"> 
+                <video id="intro_video" autoplay="autoplay" muted src="./1.mp4" style="max-width: 100%; max-height: 100%; height: auto;"></video>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between flex-wrap" style="width: 100vw; height: 100vh; background-color: #867cc6; ::after, ::before {box-sizing: border-box;};" id="pg_2">
+        <div style="width: 30%; max-height: 100%; ::after, ::before {
+            box-sizing: unset;}" class="d-flex align-items-center flex-wrap" id="pg_2_vid">
+            <div>
+                <video id="intro_video" loop autoplay="autoplay" muted src="./abt.mp4" style="max-width: 100%; max-height: 100%; height: auto;"></video>
+            </div>
+        </div>
+        <div id="pg_2_box"  style="::after, ::before {
+            box-sizing: unset;} width: 70%; max-width: 70%; max-height: 98%; padding-left: 10px; padding-right: 20px; padding-top: 15px;padding-bottom: 15px; font-size: 30px;"  >
+            <h1 style="font-family: 'VT323', monospace; padding-left: 20px; font-weight: bold; font-size: 40px;">About Me</h1>
+            <div style="background-color: beige;width: 100%;height: 90%; max-height: 90%; overflow: hidden; border-radius: 20px;border-color: #7d77a2;border-style: solid;border-width: 4px; padding: 10PX;">
+                <div class="row">
+                    <div class="col" >
+                        <div style="background-color: #7d77a2; border-radius: 20px;">
+                            <p style="font-family: 'VT323', monospace; margin-left: 10px;"><img class="abt_img" width="30px" src="./Name.png" alt="Name Icon"><b>Name</b>: Jeswin K Johnson</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="background-color: #7d77a2; border-radius: 20px;">
+                            <p style="font-family: 'VT323', monospace; margin-left: 10px;" ><img class="abt_img" width="30px" src="./Age.png" alt="Age Icon"><b>Age</b>: 17</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div style="background-color: #7d77a2; border-radius: 20px;">
+                            <p style="font-family: 'VT323', monospace; margin-left: 10px;"><img class="abt_img" width="30px" src="./location.png" alt="Place Icon"><b>Place</b>: Riyadh, Saudi Arabia</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="background-color: #7d77a2; border-radius: 20px;">
+                            <p style="font-family: 'VT323', monospace; margin-left: 10px;"><img class="abt_img" width="30px" src="./passport.png" alt="Nationality Icon"><b>Nationality</b>: Indian</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="width: 100%; height:90%; margin-right: 0px;margin-left: 0px; max-height: 90%; overflow:scroll;" id="Skill">
+                    <div class="col" style="border-right-style: solid; border-right-width: 0.25px;"> 
+                        <center><h1 style="font-family: 'VT323', monospace; font-weight: bold;">Skills</h1></center>
+
+                        <div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">Python</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="95" id="python_bar" class="prog"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">Javascript</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="85" id="script_bar" class="prog"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">HTML & CSS</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="75" id="html_bar" class="prog"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">3d Modeling</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="60" id="model_bar" class="prog"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">C++</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="30" id="c_bar" class="prog"></progress>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="margin-bottom: 0px;font-size: 25px;font-family: 'VT323', monospace;margin-right: 10px;">Java</p>
+                                </div>
+                                <div class="col">
+                                    <progress max="100" value="20" id="java_bar" class="prog"></progress>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div style="width: 100%;" class="row">
+                                <div class="col-md-4">
+                                    <p class="skill_p">Bootstrap</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">LLM</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">OpenAi</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">Node Js</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">LangChain</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">Vector Database</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">Video Editing</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="skill_p">Photo Editing</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Speech Recognition</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Arduino</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Android</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Unity</p>
+                                </div>
+
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Blender</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Talib</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Pandas</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Flask</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Streamlit</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Scikit Learn</p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <p class="skill_p">Konva Js</p>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col" style="border-left-style: solid; border-left-width: 0.25px;">
+                        <center><h1 style="font-family: 'VT323', monospace; font-weight: bold;">Education</h1></center>
+                        <p class="edu_p"><b>Class</b>: 12th</p>
+                        <p class="edu_p"><b>Board</b>: CBSE</p>
+                        <p class="edu_p"><b>Academic Year</b>: 2023-2024</p>
+                        <p class="edu_p" style="font-size: 29px;"><b>Avarage Highschool GPA</b>: 3.338/4.000</p>
+                        <p class="edu_p"><b><u>Other Certification</u></b></p>
+                        <ul>
+                            <li>
+                                <p class="edu_p" style="font-size: 25px;">UpGrad: Javascript Basics From Scratch</p>
+                                <p class="edu_p">Year: September, 2021</p>
+                            </li>
+                            <li>
+                                <p class="edu_p" style="font-size: 25px;">HackerRank: Python Basic</p>
+                                <p class="edu_p">Year: March, 2023</p>
+                            </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:rgb(33,32,32);">
+        <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <div class="card" style="width: 90vw; height: 90vh;">
+                    <div class="card-info">
+                        <div class="d-flex align-items-center" style="width: 100%; height: 100%;">
+                            <div style="width: 40%;padding-left: 10px;">
+                                <video src="./ProSpeak.mp4" controls width="100%"></video>
+                            </div>
+                            <div style="width: 60%;padding-left: 10px;overflow-y: auto;padding-right: 10px; height: 100%; padding-top: 15px">
+                                <center><p style="font-family: 'Quicksand';font-size: 30px;color: rgb(232 232 232);">ProSpeak</p></center>
+                                <p style="font-size: 15px;color: rgb(251 239 231); ">
+                                    ProSpeak is a desktop application that takes text prompt in any language and genrates E-mail's in the conditions/context it has been given in acordance to the prompt, Or voice prompt in 6 dialects across 7 langauges.
+                                    <br>
+                                    <br>
+                                    ProSpeak was developed to cater for the non native english speakers working in corprate envirnoments, This was developed to break the lanaguge barrier in the work setting and to present one self more commuicatable.
+                                    <br>
+                                    <br>
+                                    The app is run using node with electron to render the application, It uses micro-apps built with python for voice trasncription and translation along with the genration, The genration part uses the text-davinci-003 LLM by OpenAi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <div class="card" style="width: 90vw; height: 90vh;">
+                    <div class="card-info">
+                        <div class="d-flex align-items-center" style="width: 100%; height: 100%;">
+                            <div style="width: 40%;padding-left: 10px;">
+                                <video controls
+                                    src="./Car_bot.mp4"
+                                    width="100%"></video>
+                            </div>
+                            <div style="width: 60%;padding-left: 10px;padding-right: 10px;overflow-y: auto; height: 100%; padding-top: 15px">
+                                <center>
+                                    <p style="font-family: 'Quicksand';font-size: 30px;color: rgb(232 232 232);">Ai Career Counselor</p>
+                                </center>
+                                <p style="font-size: 15px;color: rgb(251 239 231);">
+                                    Typical identification tests are mcq with very limited spectra of answers, which becomes very difficult to answer
+                                    without compromising on some crucial details as well as these traditional test doesn't lead on a question the questions
+                                    are pre-defined and static
+                                    <br>
+                                    <br>
+                                    This website sought to clear all the mentioned problems by allowing the users to convey their entire answer by
+                                    eliminating rigid mcq and implementing a text field. Users can convey their entire point and answer conflicting
+                                    questions, The website also asks questions dynamically meaning it comprehends your previous answers to ask new ones to
+                                    make the result more accurate. Users also can inform the bot if they are not satisfied with the prediction leading to
+                                    the bot asking more questions to refine its answer, users can ask about the predictions, bot also can explain the
+                                    professions it has curated in detail.
+                                    <br>
+                                    <br>
+                                    The website is run on node js as its backend, the webpages are all in html and css along with Bootstrap for position and
+                                    gsap for animations. The bot is run on the GPT-3.5_turbo-16k model from OpenAi in a chat configuration configured with
+                                    system prompts.
+                                    <br>
+                                    <br>
+                                    (Note: The demo video has been sped up to twice the speed to cut down on length the orginal video is about 6min)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <div class="card" style="width: 90vw; height: 90vh;">
+                    <div class="card-info">
+                        <div class="d-flex align-items-center" style="width: 100%; height: 100%;">
+                            <div style="width: 40%;padding-left: 10px;">
+                                <video
+                                    src="./Node.mp4" controls
+                                    width="100%"></video>
+                            </div>
+                            <div style="width: 60%;overflow-y: auto; padding-left: 10px;padding-right: 10px; height: 100%; padding-top: 15px">
+                                <center>
+                                    <p style="font-family: 'Quicksand';font-size: 30px;color: rgb(232 232 232);">Ai Workflow Editor</p>
+                                </center>
+                                <p style="font-size: 15px;color: rgb(251 239 231);">
+                                    This is a webiste which allows users to develop Ai workflows using nodes.
+                                    <br>
+                                    <br>
+                                    The premise of this website is to allow users to make Ai workflows using nodes and host it as an api, and use it on api calls made by other itegrations like IFTTT etc, Allowing non programmers to develop workflows to automate daily and tedious task like, Email Writing, Meeting Minutes making, Class notes making, Homework doing etc etc.
+                                    <br>
+                                    <br>
+                                    As mentioned this is still under development but the final version is expected to vector database, langchain, LLAMA, GPT-3, GPT-4, Bard, IFTTT, Gmail, Github and a wide verity of integrations.
+                                    <br>
+                                    <br>
+                                    The current stance of the project is that the Node Editor, Serialiser, Code Genrator has been built.
+                                    <br>
+                                    <br>
+                                    The website uses node as backend, The node editor, Serialiser and the genarator is completly built in vannila js with Konva.js which is a graphics library. The webpge is written in html and css along with Bootstrap.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <div class="card" style="width: 90vw; height: 90vh;">
+                    <div class="card-info">
+                        <div class="d-flex align-items-center" style="width: 100%; height: 100%;">
+                            <div style="width: 40%;padding-left: 10px;">
+                                <video
+                                    src="./portfolio.mp4" controls
+                                    width="100%"></video>
+                            </div>
+                            <div style="width: 60%;padding-left: 10px;padding-right: 10px; height: 100%; padding-top: 15px; overflow-y: auto;">
+                                <center>
+                                    <p style="font-family: 'Quicksand';font-size: 30px;color: rgb(232 232 232);">Portfolio Website</p>
+                                </center>
+                                <p style="font-size: 15px;color: rgb(251 239 231);">
+                                    The website your currently probably seeing.
+                                    <br>
+                                    <br>
+                                    The webiste has node as backend, the webpages are written in HTML and CSS uses bootstrap for positioning and gsap for animation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div>
+                <div class="card" style="width: 90vw; height: 90vh;">
+                    <div class="card-info">
+                        <div class="d-flex align-items-center" style="width: 100%; height: 100%;">
+                            <div style="width: 40%;padding-left: 10px;">
+                                <video
+                                    src=""
+                                    width="100%"></video>
+                            </div>
+                            <div style="width: 60%;padding-left: 10px;padding-right: 10px; height: 100%; padding-top: 15px; overflow-y: auto;">
+                                <center>
+                                    <p style="font-family: 'Quicksand';font-size: 30px;color: rgb(232 232 232);">Ai Guru</p>
+                                </center>
+                                <p style="font-size: 15px;color: rgb(251 239 231); ">
+                                    This is a very early work in progres, This is a desktop application which allows users to feed in thier own data and use LLM's to answer questions on the data.
+                                    <br>
+                                    <br>
+                                    The use of this software can be from reseachers finding answers at thier fingertips, students getting free coaching, study metrials, summaris, automatic homework completion or insitituations using to have thier data more sorted or departments like safety or medical to have all the standared operating procedures to thier particular senarios in thier fingertips. etc etc the implications and endless.
+                                    <br>
+                                    <br>
+                                    The app will be using node as its backend with electron for rendering, The app is expected to use the 3.5-turbo-16k model from OpenAi along with Chroma as its vector database.
+                                    <br>
+                                    <br>
+                                    (A presentable version is not availble at the moment, current stages of the project are CLI)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between flex-wrap align-items-center"
+        style="width: 100vw; height: 100vh; background-color: #977f94">
+    
+        <div style="width: 25%; max-height: 100%; padding-left: 5px;">
+            <video id="last_video" autoplay="autoplay" muted loop="true"
+                src="./last.mp4"
+                style="max-width: 100%; max-height: 100%; height: auto;"></video>
+        </div>
+        <div style="width: 75%;height: 100%;padding-left: 15px;padding-top: 20px; justify-content: center; align-items: center; display: flex;">
+            <div style="padding-left: 20px;">
+                <center>
+                    <h1 style="font-size: 50px;font-family: 'VT323';">Thank You</h1>
+                    <br>
+                    <p style="font-family: 'Quicksand';font-size: 20px;"><b>Get In Touch : graceindustry2020@gmail.com | jeswinkjohnson@gmail.com</b></p>
+                </center>
+            </div>
+        </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+            integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script>
+        new bootstrap.Modal(document.getElementById('modal_my')).toggle()
+        // Import
+        const intro_video = document.getElementById("intro_video")
+        // Video Source Import
+        const loop_sequence = "./2.mp4"
+
+        intro_video.addEventListener("ended", function(){
+            intro_video.src = loop_sequence
+            intro_video.loop = true
+        }, {"once": true})
+
+        if (screen.width < 768) {
+                document.location.href = window.location.protocol + "//" + window.location.host + "/n"
+            }
+            else if (screen.width >= 1024) {
+                document.location.href = window.location.protocol + "//" + window.location.host + "/d"
+            }
+    </script>
+</body>
+</html>
