@@ -1,7 +1,7 @@
 const express = require("express")
 const { readFile } = require("fs")
 const app = express()
-app.use(express.static('/Assets'))
+app.use(express.static('/app/Assets'))
 app.get("/", function (req, res) {
     console.log("Current directory:", __dirname);
     readFile("/app/loader.html", "UTF-8", function (err, data) {
@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
     })
 })
 app.get("/m", function (req, res) {
-    readFile("/mobile.html", "UTF-8", function (err, data) {
+    readFile("/app/mobile.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
@@ -22,7 +22,7 @@ app.get("/m", function (req, res) {
     })
 })
 app.get("/d", function (req, res) {
-    readFile("/main.html", "UTF-8", function (err, data) {
+    readFile("/app/main.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
@@ -31,7 +31,7 @@ app.get("/d", function (req, res) {
     })
 })
 app.get("/n", function (req, res) {
-    readFile("/reject.html", "UTF-8", function (err, data) {
+    readFile("/app/reject.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
