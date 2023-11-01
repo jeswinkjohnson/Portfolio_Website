@@ -4,7 +4,7 @@ const app = express()
 app.use(express.static('/Assets'))
 app.get("/", function (req, res) {
     console.log("Current directory:", __dirname);
-    readFile("/loader.html", "UTF-8", function (err, data) {
+    readFile("/app/loader.html", "UTF-8", function (err, data) {
         if (err) {
             res.sendStatus("500").send("Out of Order")
         }
